@@ -3,6 +3,10 @@ import requests
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return '✅ De API draait. Ga naar <a href="/api/compare">/api/compare</a>'
+
 @app.route('/api/compare')
 def compare_prices():
     results = []
